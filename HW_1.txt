@@ -1,0 +1,54 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir group_30_free
+3) Зайти в папку - cd group_30_free
+4) Создать 3 папки - mkdir qa_1 qa_2 qa_3
+5) Зайти в любоую папку - cd qa_1/
+6) Создать 5 файлов (3 txt, 2 json) - touch qq.txt qq_1.txt qq_2.txt qa.json qa_1.json
+7) Создать 3 папки - mkdir qw_1 qw_2 qw_3
+8. Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл - vim qq.txt
+10) + написать туда что-нибудь, любой текст. - "i" 12345 qwerty
+11) + сохранить и выйти. - esc, :wq, enter
+12) Выйти из папки на уровень выше cd ../
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. - mv qa_2/q22.txt qa_2/q23.json qa_3
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp qa_3/q22.txt qa_3/q23.json qa_2
+15) Найти файл по имени - find qa_2/q22.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. - tail -f qa.txt | grep line2
+17) вывести несколько первых строк из текстового файла -  head -n 2 qa.txt
+18) вывести несколько последних строк из текстового файла - tail -n 2 qa.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. - less qa.txt
+20) вывести дату и время - date
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request - curl http://162.55.220.72:5005/terminak-hw-request
+
+$ curl http://162.55.220.72:5005/terminal-hw-request
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0   2451      0 --:--:-- --:--:-- --:--:--  2460{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+
+cd qa_4/
+mkdir q1 q2 q3
+cd qa1/
+touch q_1.txt q_2.txt q_3.txt qa_1.json qa_2.json
+mkdir qw1 qw2 qw3
+ls -la
+mv q_1.txt qa_1.json q2
